@@ -2,26 +2,36 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.3
 
 ColumnLayout {
-    spacing: 2
-    Layout.alignment: Qt.AlignCenter
-    MenuItem
-    {
-        menu_name: "Home"
-    }
+    //width: 100
+    //height: parent.height
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    //Layout.alignment: Qt.AlignCenter
+    property var selected_index: 0
 
     MenuItem
     {
-        menu_name: "Mine"
+        is_selected: true
+        menu_name: "Home"
+        image_source: "image/home_normal_32x.png"
     }
 
     MenuItem
     {
         menu_name: "Game Center"
+        image_source: "image/game_center_normal_32x.png"
+    }
+
+    MenuItem
+    {
+        menu_name: "Mine"
+        image_source: "image/mine_normal_32x.png"
     }
 
     MenuItem
     {
         menu_name: "Setting"
+        image_source: "image/setting_normal_32x.png"
     }
 
 }
