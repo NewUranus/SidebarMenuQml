@@ -65,6 +65,8 @@ Rectangle {
 
     Image {
         id: item_image
+        width: 32
+        height: 32
         source: image_source
         anchors.horizontalCenter: parent.horizontalCenter
         MouseArea
@@ -74,7 +76,8 @@ Rectangle {
             onEntered:
             {
                 item_name_text.color = "white";
-                item_image.source = "image/home_hover_32x.png"
+                //item_image.source = "image/home_hover_32x.png"
+                color:"#f4cf00"
             }
         }
     }

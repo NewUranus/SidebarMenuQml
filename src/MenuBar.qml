@@ -13,25 +13,25 @@ ColumnLayout {
     {
         is_selected: true
         menu_name: "Home"
-        image_source: "image/home_normal_32x.png"
+        image_source: "svg/home.svg"
     }
 
     MenuItem
     {
         menu_name: "Game Center"
-        image_source: "image/game_center_normal_32x.png"
+        image_source: "svg/shoppingbag.svg"
     }
 
     MenuItem
     {
         menu_name: "Mine"
-        image_source: "image/mine_normal_32x.png"
+        image_source: "svg/like.svg"
     }
 
     MenuItem
     {
         menu_name: "Setting"
-        image_source: "image/setting_normal_32x.png"
+        image_source: "svg/preferences.svg"
     }
 
 }
