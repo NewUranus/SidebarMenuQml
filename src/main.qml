@@ -13,6 +13,11 @@ Window {
     //默认背景颜色
     color: "#262940"
     flags: Qt.Window | Qt.FramelessWindowHint
+    Image {
+        id: bg
+        anchors.fill: parent
+        source: "image/bg_home.png"
+    }
     //sidebar
     /*
      *自定义的组件，需要大写开头，否则无法引用
@@ -23,4 +28,9 @@ Window {
     }
 
 
+    Gradient{
+        GradientStop { position: 0.0; color: "red" }
+        GradientStop { position: 0.33; color: "yellow" }
+        GradientStop { position: 1.0; color: "green" }
+    }
 }

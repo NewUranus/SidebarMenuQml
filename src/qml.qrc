@@ -3,18 +3,10 @@
         <file>main.qml</file>
         <file>MenuBar.qml</file>
         <file>MenuItem.qml</file>
-        <file>image/home_normal.png</file>
-        <file>image/mine_normal.png</file>
-        <file>image/game_center_normal_64x.png</file>
-        <file>image/setting_normal.png</file>
-        <file>image/game_center_normal_32x.png</file>
-        <file>image/home_normal_32x.png</file>
-        <file>image/mine_normal_32x.png</file>
-        <file>image/setting_normal_32x.png</file>
-        <file>image/home_hover_32x.png</file>
         <file>svg/home.svg</file>
         <file>svg/like.svg</file>
         <file>svg/preferences.svg</file>
         <file>svg/shoppingbag.svg</file>
+        <file>image/bg_home.png</file>
     </qresource>
 </RCC>

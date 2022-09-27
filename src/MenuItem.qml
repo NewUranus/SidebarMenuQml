@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtQuick.Controls 2.12
 
 Rectangle {
 
@@ -14,8 +15,8 @@ Rectangle {
       defalt: false
     */
     color: "transparent"
-    border.color: "green" //设置边框的颜色
-    border.width: 1       //设置边框的大小
+//    border.color: "green" //设置边框的颜色
+//    border.width: 1       //设置边框的大小
 
     function onMouseEnter()
     {
@@ -63,24 +64,46 @@ Rectangle {
         console.log("image hover")
     }
 
-    Image {
-        id: item_image
-        width: 32
-        height: 32
-        source: image_source
+    /*
+     *change svg color: https://stackoverflow.com/questions/15236304/need-to-change-color-of-an-svg-image-in-qml
+     */
+    Button{
+        id: icon_btn
+        width: 64
+        height: 64
         anchors.horizontalCenter: parent.horizontalCenter
-        MouseArea
-        {
-            anchors.fill: parent
-            cursorShape: Qt.PointingHandCursor
-            onEntered:
-            {
-                item_name_text.color = "white";
-                //item_image.source = "image/home_hover_32x.png"
-                color:"#f4cf00"
-            }
+        anchors.bottom: parent.verticalCenter
+        background:{
+            opacity:1
         }
+        icon{
+            //id: item_btn_icon
+            source: image_source
+            //color: "#f4cf00"
+            color: "white"
+        }
+
     }
+
+//    Image {
+//        id: item_image
+//        width: 32
+//        height: 32
+//        source: image_source
+//        anchors.horizontalCenter: parent.horizontalCenter
+//        MouseArea
+//        {
+//            anchors.fill: parent
+//            cursorShape: Qt.PointingHandCursor
+//            onEntered:
+//            {
+//                item_name_text.color = "white";
+//                //item_image.source = "image/home_hover_32x.png"
+//                color:"#f4cf00"
+//            }
+//        }
+//    }
+
 
     /*
      *hover:#f4cf00(244 207 0)
@@ -89,8 +112,8 @@ Rectangle {
         id: item_name_text
         text: menu_name
         color: "white"
-        anchors.top: item_image.bottom
-        anchors.horizontalCenter: item_image.horizontalCenter
+        anchors.top: parent.verticalCenter
+        anchors.horizontalCenter: icon_btn.horizontalCenter
         MouseArea
         {
             id: text_mouse

@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
+import QtQuick.Shapes 1.12
 
 ColumnLayout {
     //width: 100
@@ -34,4 +35,23 @@ ColumnLayout {
         image_source: "svg/preferences.svg"
     }
 
+//    Shape{
+//        anchors.fill: parent
+//        ShapePath
+//        {
+//            strokeColor: "white"
+//            strokeWidth: 1
+//            strokeStyle: ShapePath.SolidLine
+//            startX: 20
+//            startY: 0
+//            PathLine{
+//                x:100
+//                y:100
+//            }
+//            PathLine{
+//                x:100
+//                y:30
+//            }
+//        }
+//    }
 }
