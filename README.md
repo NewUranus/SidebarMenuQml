@@ -1,5 +1,7 @@
 # SidebarMenuQml
-A sidebar menu
+A sidebar menu in qml.
 
-##### image source
+#### ScreenShots
+
+#### image source
 https://icon-icons.com/
