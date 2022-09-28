@@ -24,13 +24,42 @@ Window {
      */
     MenuBar
     {
+        id: side_menubar
         //anchors.centerIn: parent
     }
 
+    Rectangle
+    {
+        border.color: "red"
+        border.width: 1
+        //anchors.fill: parent
+        width: parent.width - side_menubar.width
+        height: parent.height
+        anchors.left: side_menubar.right
+        opacity: 0
 
-    Gradient{
-        GradientStop { position: 0.0; color: "red" }
-        GradientStop { position: 0.33; color: "yellow" }
-        GradientStop { position: 1.0; color: "green" }
+        Rectangle
+        {
+
+        }
     }
+
+//    Canvas {
+//        anchors.fill: parent
+//        onPaint: {
+//            var ctx = getContext("2d");
+//            ctx.reset();
+
+//            var centreX = 0;
+//            var centreY = height;
+//            var radius= 50;
+
+//            var gradient=ctx.createRadialGradient(centreX,centreY,0,centreX,centreY,radius);
+//            gradient.addColorStop(0, '#0066cc');
+//            gradient.addColorStop(1, '#e5f2ff');
+//            ctx.fillStyle=gradient;
+//            ctx.arc(centreX, centreY, width / 4, 0, Math.PI * 2, false);
+//            ctx.fill();
+//        }
+//    }
 }
