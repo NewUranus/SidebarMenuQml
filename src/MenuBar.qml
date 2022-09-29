@@ -10,6 +10,7 @@ ColumnLayout {
     //Layout.alignment: Qt.AlignCenter
     property var selected_index: 0
 
+    id: menu_item_area
     MenuItem
     {
         is_selected: true
@@ -35,23 +36,42 @@ ColumnLayout {
         image_source: "svg/preferences.svg"
     }
 
-//    Shape{
-//        anchors.fill: parent
-//        ShapePath
-//        {
-//            strokeColor: "white"
-//            strokeWidth: 1
-//            strokeStyle: ShapePath.SolidLine
-//            startX: 20
-//            startY: 0
-//            PathLine{
-//                x:100
-//                y:100
+    MouseArea
+    {
+        onEntered:
+        {
+//            for(var item in menu_item_area.children)
+//            {
+//                console.log(item.objectName);
+//                if(item.objectName === "side_menu_item")
+//                {
+//                    //item.
+//                    //(MenuItem)item.item_name_text.visible
+//                }
 //            }
-//            PathLine{
-//                x:100
-//                y:30
-//            }
-//        }
-//    }
+        }
+    }
+
+
+
+
+    //    Shape{
+    //        anchors.fill: parent
+    //        ShapePath
+    //        {
+    //            strokeColor: "white"
+    //            strokeWidth: 1
+    //            strokeStyle: ShapePath.SolidLine
+    //            startX: 20
+    //            startY: 0
+    //            PathLine{
+    //                x:100
+    //                y:100
+    //            }
+    //            PathLine{
+    //                x:100
+    //                y:30
+    //            }
+    //        }
+    //    }
 }

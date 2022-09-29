@@ -11,6 +11,8 @@ Rectangle {
     property bool is_selected: false
     signal image_enter();
 
+    objectName: "side_menu_item"
+
     /*
       defalt: false
     */
