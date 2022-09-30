@@ -15,7 +15,12 @@ ColumnLayout {
     {
         is_selected: true
         menu_name: "Home"
-        image_source: "svg/home.svg"
+        image_source: "svg/home.svg";
+//        onMouse_enter:
+//        {
+//            //test = menu_name;
+//        }
+
     }
 
     MenuItem
@@ -50,6 +55,11 @@ ColumnLayout {
 //                }
 //            }
         }
+    }
+
+    Text {
+        id: test
+        text: qsTr("text")
     }
 
 

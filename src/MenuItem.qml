@@ -4,12 +4,15 @@ import QtQuick.Controls 2.12
 Rectangle {
 
     id: menuitem
+    //property   name: value
     width: 100
     height: 100
-    property var menu_name: ""
+    property string menu_name: ""
     property var image_source: ""
     property bool is_selected: false
-    signal image_enter();
+    //signal mouse_enter(menuitem.menu_name: menu_name);
+    signal mouse_exit();
+    signal mouse_click();
 
     objectName: "side_menu_item"
 
@@ -46,11 +49,14 @@ Rectangle {
         onEntered: {
             item_name_text.color = "#f4cf00";
             item_name_text.visible = true
+
+            menuitem.mouse_enter(menuitem.menu_name);
         }
         onExited: {
             item_name_text.color = "#white";
             item_name_text.visible = false
         }
+
     }
 
     Rectangle
@@ -79,10 +85,18 @@ Rectangle {
             opacity:1
         }
         icon{
-            //id: item_btn_icon
+            id: item_btn_icon
             source: image_source
             //color: "#f4cf00"
             color: "white"
+        }
+
+        MouseArea
+        {
+            onClicked:
+            {
+                //item_btn_icon.color:"#f4cf00";
+            }
         }
 
     }
