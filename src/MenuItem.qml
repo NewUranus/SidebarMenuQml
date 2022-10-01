@@ -20,8 +20,8 @@ Rectangle {
       defalt: false
     */
     color: "transparent"
-//    border.color: "green" //设置边框的颜色
-//    border.width: 1       //设置边框的大小
+    //    border.color: "green" //设置边框的颜色
+    //    border.width: 1       //设置边框的大小
 
     function onMouseEnter()
     {
@@ -42,6 +42,7 @@ Rectangle {
 
     MouseArea
     {
+        acceptedButtons: Qt.LeftButton
         hoverEnabled: true
         anchors.fill: parent
         width: parent.width
@@ -50,13 +51,17 @@ Rectangle {
             item_name_text.color = "#f4cf00";
             item_name_text.visible = true
 
-            menuitem.mouse_enter(menuitem.menu_name);
+            //menuitem.mouse_enter(menuitem.menu_name);
         }
         onExited: {
             item_name_text.color = "#white";
             item_name_text.visible = false
         }
-
+        onClicked: (mouse)=>{
+                       if(mouse.button === Qt.LeftButton){
+                           console.log("left clicked");
+                       }
+                   }
     }
 
     Rectangle
@@ -85,7 +90,7 @@ Rectangle {
             opacity:1
         }
         icon{
-            id: item_btn_icon
+            //id: item_btn_icon
             source: image_source
             //color: "#f4cf00"
             color: "white"
@@ -101,24 +106,24 @@ Rectangle {
 
     }
 
-//    Image {
-//        id: item_image
-//        width: 32
-//        height: 32
-//        source: image_source
-//        anchors.horizontalCenter: parent.horizontalCenter
-//        MouseArea
-//        {
-//            anchors.fill: parent
-//            cursorShape: Qt.PointingHandCursor
-//            onEntered:
-//            {
-//                item_name_text.color = "white";
-//                //item_image.source = "image/home_hover_32x.png"
-//                color:"#f4cf00"
-//            }
-//        }
-//    }
+    //    Image {
+    //        id: item_image
+    //        width: 32
+    //        height: 32
+    //        source: image_source
+    //        anchors.horizontalCenter: parent.horizontalCenter
+    //        MouseArea
+    //        {
+    //            anchors.fill: parent
+    //            cursorShape: Qt.PointingHandCursor
+    //            onEntered:
+    //            {
+    //                item_name_text.color = "white";
+    //                //item_image.source = "image/home_hover_32x.png"
+    //                color:"#f4cf00"
+    //            }
+    //        }
+    //    }
 
 
     /*
